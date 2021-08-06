@@ -1,7 +1,7 @@
 <h1 align="center"> Sistema de gestión de libros para una librería</h1>
 <p align="center"> Proyecto de ADA & ED</p>
 
-# Curso
+# Cursos
 ---
 
 Análisis y Diseño de Algoritmos & Estructura de Datos

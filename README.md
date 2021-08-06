@@ -4,8 +4,7 @@
 # Curso
 ---
 
-Análisis y diseño de algoritmos
-Estrudtura de datos
+Análisis y Diseño de Algoritmos & Estructura de Datos
 
 # Docente
 ---

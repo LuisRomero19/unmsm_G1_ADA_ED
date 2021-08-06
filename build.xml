@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Puede editar este archivo libremente. Vea los bloques comentados a continuación para -->
+<!-- algunos ejemplos de cómo personalizar la compilación.. -->
+<!-- (Si lo borra y vuelve a abrir el proyecto, se volverá a crear.)  -->
+<!-- De forma predeterminada, solo los comandos Limpiar y Generar usan este script de compilación. -->
+<!-- Los comandos como Ejecutar, Depurar y Probar solo usan este script de compilación si -->
+<!-- la función Compilar al guardar está desactivada para el proyecto. -->
+<!-- Puede desactivar la configuración Compilar al guardar (o Implementar al guardar) -->
+<!-- en el cuadro de diálogo Propiedades del proyecto del proyecto. -->
+<project name="ProyectoTecnoMedic" default="default" basedir=".">
+    <description>Builds, tests, and runs the project ProyectoTecnoMedic.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <!--
+
+    Existen varios objetivos que están vacíos por defecto y que pueden
+    utilizado para la ejecución de sus tareas. Estos objetivos generalmente se ejecutan
+    antes y después de algunos objetivos principales. Ellos son: 
+
+      -pre-init:                 llamado antes de la inicialización de las propiedades del proyecto
+      -post-init:                llamado después de la inicialización de las propiedades del proyecto
+      -pre-compile:              llamado antes de la compilación javac
+      -post-compile:             llamado después de la compilación javac
+      -pre-compile-single:       llamado antes de la compilación javac de un solo archivo
+      -post-compile-single:      llamado después de la compilación javac de un solo archivo
+      -pre-compile-test:         llamado antes de la compilación javac de pruebas JUnit
+      -post-compile-test:        llamado después de la compilación javac de pruebas JUnit
+      -pre-compile-test-single:  llamado antes de la compilación javac de la prueba JUnit única
+      -post-compile-test-single: llamado después de la compilación javac de la prueba JUunit única
+      -pre-jar:                  llamado antes del edificio JAR
+      -post-jar:                 llamado después del edificio JAR
+      -post-clean:               llamado después de productos de construcción de limpieza
+
+    (Los destinos que comienzan con '-' no deben llamarse por sí solos).
+
+    El ejemplo de inserción de un ofuscador después de la compilación podría verse así:
+
+        <target name="-post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+    Para obtener una lista de las propiedades disponibles, consulte los archivos 
+    nbproject/build-impl.xml
+
+
+    Otra forma de personalizar la compilación es anulando los objetivos principales existentes.
+    Los objetivos de interés son: 
+
+      -init-macrodef-javac:     define macro para la compilación javac
+      -init-macrodef-junit:     define macro para la ejecución de junit
+      -init-macrodef-debug:     define macro para depuración de clases
+      -init-macrodef-java:      define macro para la ejecución de la clase
+      -do-jar:                  Edificio JAR
+      run:                      ejecución del proyecto
+      -javadoc-build:           Generación Javadoc
+      test-report:              Generación de informes JUnit
+
+    
+    Un ejemplo de anulación del objetivo para la ejecución del proyecto podría verse así:
+
+        <target name="run" depends="ProyectoFISITK-impl.jar">
+            <exec dir="bin" executable="launcher.exe">
+                <arg file="${dist.jar}"/>
+            </exec>
+        </target>
+
+    Tenga en cuenta que el objetivo anulado depende del objetivo del jar y no solo de
+    el destino de compilación como lo hace el destino de ejecución normal. Nuevamente, para obtener una lista de
+    propiedades que puede utilizar, marque el objetivo que está anulando en el archivo
+    nbproject/build-impl.xml 
+
+    -->
+</project>

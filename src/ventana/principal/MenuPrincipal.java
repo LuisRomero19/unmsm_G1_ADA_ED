@@ -19,7 +19,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         initComponents();
         iniciarComponentes();
     }
-        public void iniciarComponentes() {
+    public void iniciarComponentes() {
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);

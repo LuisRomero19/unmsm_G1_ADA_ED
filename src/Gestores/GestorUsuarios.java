@@ -13,6 +13,9 @@ public class GestorUsuarios {
     }
 
     public Usuario buscarPorDNI(String dni) {
+        long TInicio, TFin, tiempo; //Variables para determinar el tiempo de ejecución
+        TInicio = System.currentTimeMillis(); 
+  
         Usuario miUsuario = null;
         NodoDoble<Usuario> nodoAux = misUsuarios.getCabecera();
         dni = dni.trim();
@@ -24,6 +27,10 @@ public class GestorUsuarios {
             }
             nodoAux = nodoAux.getSiguiente();
         }
+        
+        TFin = System.currentTimeMillis();
+        tiempo = TFin - TInicio;
+        System.out.println("Tiempo de ejecución en milisegundos: " + tiempo);
         return miUsuario;
     }
 
@@ -77,6 +84,10 @@ public class GestorUsuarios {
         } else {
             misUsuarios = new ListaEnlazadaDoble();
         }
+    }
+    
+    public void ordenarDatos(){
+        //ordenar usuarios
     }
 
     private void actualizar(javax.swing.table.DefaultTableModel modelo){

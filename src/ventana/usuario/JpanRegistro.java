@@ -40,6 +40,8 @@ public class JpanRegistro extends javax.swing.JPanel {
         tfCarrera = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        tfCarrera1 = new javax.swing.JTextField();
 
         eNombres.setText("Nombres:");
 
@@ -69,6 +71,8 @@ public class JpanRegistro extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setText("Monto");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -86,7 +90,8 @@ public class JpanRegistro extends javax.swing.JPanel {
                                     .addComponent(eDNI)
                                     .addComponent(eCodigo)
                                     .addComponent(jLabel1)
-                                    .addComponent(jLabel2))
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3))
                                 .addGap(52, 52, 52)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(tfApMaterno)
@@ -95,7 +100,8 @@ public class JpanRegistro extends javax.swing.JPanel {
                                     .addComponent(tfDNI)
                                     .addComponent(tfCodigo)
                                     .addComponent(tfInstitucion)
-                                    .addComponent(tfCarrera, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))))
+                                    .addComponent(tfCarrera, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(tfCarrera1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addComponent(jButton1)
@@ -136,9 +142,13 @@ public class JpanRegistro extends javax.swing.JPanel {
                     .addComponent(tfCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(tfCarrera1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -172,7 +182,7 @@ public class JpanRegistro extends javax.swing.JPanel {
         this.tfCarrera.setText("");
     }
     
-    // Declaracion de variables - no modificar//GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel eApMaterno;
     private javax.swing.JLabel eApPaterno;
     private javax.swing.JLabel eCodigo;
@@ -182,12 +192,14 @@ public class JpanRegistro extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField tfApMaterno;
     private javax.swing.JTextField tfApPaterno;
     private javax.swing.JTextField tfCarrera;
+    private javax.swing.JTextField tfCarrera1;
     private javax.swing.JTextField tfCodigo;
     private javax.swing.JTextField tfDNI;
     private javax.swing.JTextField tfInstitucion;
     private javax.swing.JTextField tfNombres;
-    // Fin de la declaracion de variables//GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

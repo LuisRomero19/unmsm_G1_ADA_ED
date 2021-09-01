@@ -4,6 +4,8 @@ import Entidades.Usuario;
 import Estructuras.ListaEnlazadaDoble;
 import Estructuras.NodoDoble;
 
+import javax.swing.JOptionPane;
+
 public class GestorUsuarios {
 
     public ListaEnlazadaDoble<Usuario> misUsuarios;
@@ -13,8 +15,8 @@ public class GestorUsuarios {
     }
 
     public Usuario buscarPorDNI(String dni) {
-        long TInicio, TFin, tiempo; //Variables para determinar el tiempo de ejecución
-        TInicio = System.currentTimeMillis(); 
+        //calcular tiempo de ejecucion
+        long startTime = System.currentTimeMillis(); 
   
         Usuario miUsuario = null;
         NodoDoble<Usuario> nodoAux = misUsuarios.getCabecera();
@@ -28,30 +30,45 @@ public class GestorUsuarios {
             nodoAux = nodoAux.getSiguiente();
         }
         
-        TFin = System.currentTimeMillis();
-        tiempo = TFin - TInicio;
-        System.out.println("Tiempo de ejecución en milisegundos: " + tiempo);
+        long endTime = System.currentTimeMillis();
+
+        JOptionPane.showMessageDialog(null, "Tiempo de ejecucion de buscar DNI: " + (endTime-startTime));
         return miUsuario;
     }
 
     public boolean eliminarPorDNI(String dni) {
+        //calcular tiempo de ejecucion
+        long startTime = System.currentTimeMillis(); 
+        
         Usuario buscado = buscarPorDNI(dni);
         if (buscado == null) {
+            long endTime = System.currentTimeMillis();
+            JOptionPane.showMessageDialog(null, "Tiempo de ejecucion de eliminar por DNI: " + (endTime-startTime));
             return false;
         } else {
             misUsuarios.eliminar(buscado);
             this.guardarCambios();
+            long endTime = System.currentTimeMillis();
+            JOptionPane.showMessageDialog(null, "Tiempo de ejecucion de eliminar por DNI: " + (endTime-startTime));
             return true;
         }
     }
 
     public boolean insertarUsuario(Usuario u) {
+        //calcular tiempo de ejecucion
+        long startTime = System.currentTimeMillis(); 
+        
         if (misUsuarios.existe(u)) {
+            long endTime = System.currentTimeMillis();
+            JOptionPane.showMessageDialog(null, "Tiempo de ejecucion de insertar usuario: " + (endTime-startTime));
+            
             return false;
         } else {
             misUsuarios.existe(u);
             misUsuarios.insertarFinal(u);
             this.guardarCambios();
+            long endTime = System.currentTimeMillis();
+            JOptionPane.showMessageDialog(null, "Tiempo de ejecucion de insertar usuario: " + (endTime-startTime));
             return true;
         }
     }
@@ -71,9 +88,11 @@ public class GestorUsuarios {
             System.out.println(Gestores.GestorArchivos.guardarArchivo(Entidades.Rutas.R_USUARIOS, arregloU));
 
         }
+        
     }
 
     public void obtenerDatos() {
+        
         Usuario arregloU[] = (Usuario[]) (Gestores.GestorArchivos.leerArchivo(Entidades.Rutas.R_USUARIOS));
 
         if (arregloU != null) {
@@ -84,6 +103,7 @@ public class GestorUsuarios {
         } else {
             misUsuarios = new ListaEnlazadaDoble();
         }
+        
     }
     
     public void ordenarDatos(){
@@ -101,7 +121,7 @@ public class GestorUsuarios {
         }
     }
     
-    private void vaciar(javax.swing.table.DefaultTableModel modelo){
+    private void vaciar(javax.swing.table.DefaultTableModel modelo){  
         int cantFilas = modelo.getRowCount();
         for (int i = cantFilas-1; i>=0; i--) {
             modelo.removeRow(i);
@@ -109,8 +129,14 @@ public class GestorUsuarios {
     }
     
     public void mostrarEnJTable(javax.swing.JTable miJT) {
+        //calcular tiempo de ejecucion
+        long startTime = System.currentTimeMillis(); 
+        
         javax.swing.table.DefaultTableModel modelo = (javax.swing.table.DefaultTableModel) miJT.getModel();
         this.vaciar(modelo);
         this.actualizar(modelo);
+        
+        long endTime = System.currentTimeMillis();
+        JOptionPane.showMessageDialog(null, "Tiempo de ejecucion de mostrar datos: " + (endTime-startTime));
     }
 }

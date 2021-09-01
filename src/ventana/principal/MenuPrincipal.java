@@ -133,7 +133,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem6);
 
-        jMenuItem10.setText("Lista de libros eliminados");
+        jMenuItem10.setText("Pedir libros");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem10ActionPerformed(evt);
@@ -239,7 +239,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
     }
 
-    // Declaracion de variables - no modificar//GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -255,5 +255,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
-    // Fin de la declaracion de variables//GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

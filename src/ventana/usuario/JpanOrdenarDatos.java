@@ -4,16 +4,12 @@
  * and open the template in the editor.
  */
 package ventana.usuario;
+import Gestores.GestorUsuarios;
 
-/**
- *
- * @author Luis
- */
 public class JpanOrdenarDatos extends javax.swing.JPanel {
 
-    /**
-     * Creates new form JpanOrdenarDatos
-     */
+    public GestorUsuarios miGU = new GestorUsuarios();;
+    
     public JpanOrdenarDatos() {
         initComponents();
     }
@@ -78,7 +74,7 @@ public class JpanOrdenarDatos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        miGU.ordenarDatos();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

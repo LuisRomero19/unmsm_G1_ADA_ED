@@ -109,6 +109,9 @@ public class GestorUsuarios {
     }
     
     public void ordenarDatos(){
+        //calcular tiempo de ejecucion
+        long startTime = System.currentTimeMillis(); 
+        
         Usuario arregloU[] = (Usuario[]) (Gestores.GestorArchivos.leerArchivo(Entidades.Rutas.R_USUARIOS));
         
         String apellidos[] = new String[arregloU.length];
@@ -117,7 +120,13 @@ public class GestorUsuarios {
             apellidos[i] = arregloU[i].getAp_paterno();
         
         sort(apellidos);
+        String data = "Apellidos ordenados:\n";
+        for(String ape: apellidos)
+            data += ape + "\n";
         
+        long endTime = System.currentTimeMillis();
+        JOptionPane.showMessageDialog(null, "Tiempo de ejecucion de ordenar datos: " + (endTime-startTime));
+        JOptionPane.showMessageDialog(null, data);
     }
     
     public void sort(String arr[])

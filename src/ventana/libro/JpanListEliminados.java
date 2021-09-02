@@ -25,7 +25,7 @@ public class JpanListEliminados extends javax.swing.JPanel {
         btnPedir = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabel1.setText(":D");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mejores-paginas-descargar-libros-gratis-forma-legal (1).jpg"))); // NOI18N
 
         jButton1.setText("Cerrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -56,14 +56,14 @@ public class JpanListEliminados extends javax.swing.JPanel {
                         .addComponent(jButton1)
                         .addGap(159, 159, 159))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(119, 119, 119))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnPedir)
                 .addGap(18, 18, 18)

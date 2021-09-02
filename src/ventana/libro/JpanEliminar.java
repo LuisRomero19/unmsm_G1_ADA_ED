@@ -30,10 +30,9 @@ public class JpanEliminar extends javax.swing.JPanel {
         jTextIsbn = new javax.swing.JTextField();
         Resp = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
-        jLabel1.setText("Eliminar:");
+        jLabel1.setText("Buscar:");
 
         jLabel2.setText("ISBN:");
 
@@ -44,13 +43,6 @@ public class JpanEliminar extends javax.swing.JPanel {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Eliminar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -69,9 +61,7 @@ public class JpanEliminar extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(159, 159, 159)
-                        .addComponent(jButton1)
-                        .addGap(36, 36, 36)
-                        .addComponent(jButton2))
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
                         .addComponent(jLabel2)
@@ -100,9 +90,7 @@ public class JpanEliminar extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(Resp, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addContainerGap())
@@ -119,30 +107,17 @@ public class JpanEliminar extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String isbn =jTextIsbn.getText();
-        if(gestorLibro.eliminarLibroPorISBN(isbn)){
-            JOptionPane.showMessageDialog(this, "¡El libro fue eliminado con exito!", "Eliminado", JOptionPane.INFORMATION_MESSAGE);
-        
-        }else{
-            JOptionPane.showMessageDialog(this, "El libro con ISBN: " +isbn+" No existe.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        jTextIsbn.setText("");
-        Resp.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         UtilSwing.quitarPanel(this);
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
-    // Declaracion de variables - no modificar//GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Resp;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextIsbn;
-    // Fin de la declaracion de variables//GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }
